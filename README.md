@@ -35,7 +35,7 @@ npm start
   The API has the following endpoints:
 
 ## Get all users
- - URL : `/users`
+ - URL : `/user/read`
  - Method : GET
  - Success Response :
  - Code : 200
@@ -79,7 +79,7 @@ npm start
 
  - This endpoint allows the user to create a new user in the database.
 
- - URL: `/users`
+ - URL: `/user/create`
 
  - Method:POST
 
@@ -120,7 +120,7 @@ npm start
 
  - This endpoint allows the user to update an existing user in the database.
 
- - URL: `/users/:id`
+ - URL: `/user/update/:id`
 
  - Method: PUT
 
@@ -160,7 +160,7 @@ npm start
 ## Delete a User
  - This endpoint allows the user to delete an existing user in the database.
 
- - URL:`/users/:id`
+ - URL:`/user/delete/:id`
  - Method:`DELETE`
  ## Success Response
  - Code : `200`
