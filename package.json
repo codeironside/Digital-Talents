@@ -4,6 +4,7 @@
   "description": "an assesment test for backend role",
   "main": "server.js",
   "scripts": {
+    "start": "backend/server.js",
     "server": "nodemon backend/server.js",
     "build": "webpack && babel src --out-dir dist"
   },
