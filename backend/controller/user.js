@@ -8,7 +8,7 @@ const create = AsyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
   if (!name && !email && !password) {
     res.status(422);
-    throw new Error("not validated");
+    throw new Error("invalid input");
   }
   const userexist = await USER.findOne({ email: email });
 
@@ -38,13 +38,7 @@ const create = AsyncHandler(async (req, res) => {
 const read = AsyncHandler(async (req, res) => {
 
 
-    const {email}= req.body
-    if(!email){
-        res.status(422)
-        throw new Error("not validated")
-    }
-
-    const user= await USER.findOne({email:email})
+    const user= await USER.find()
     if(user){
         res.status(200).json({message:user})
 
@@ -61,7 +55,7 @@ const updated = AsyncHandler(async (req, res) => {
 
     const {password}=req.body
     if(!password){
-        res.status(401)
+        res.status(400)
         throw new Error("invalid input")
 
 
@@ -74,7 +68,7 @@ const updated = AsyncHandler(async (req, res) => {
         res.status(200)
         .json({message:user})
     }else{
-        res.status(401)
+        res.status(404)
         throw new Error("user not found");
     }
 });
