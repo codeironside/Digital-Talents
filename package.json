@@ -1,0 +1,27 @@
+{
+  "name": "digital-talents",
+  "version": "1.0.0",
+  "description": "an assesment test for backend role",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeironside/Digital-Talents.git"
+  },
+  "author": "oluwtobi ayoola jolaosho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codeironside/Digital-Talents/issues"
+  },
+  "homepage": "https://github.com/codeironside/Digital-Talents#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-validator": "^6.14.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.8.4"
+  }
+}
